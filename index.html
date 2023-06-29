@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link rel="stylesheet" href="/dist/output.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;0,800;1,400;1,700;1,800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Age calculator app</title>
+  </head>
+  <body>
+    <!-- Main flex container -->
+    <content
+      class="flex items-center justify-center mx-auto bg-neutralLightGrey h-screen font-poppins"
+    >
+      <!-- Card container -->
+      <form
+        class="bg-white mx-10 space-y-10 p-10 py-16 lg:w-[520px] lg:py-10 lg:space-y-0 rounded-3xl rounded-br-[102px]"
+      >
+        <!-- DOB input container -->
+        <div id="dob-input" class="flex space-x-4">
+          <!-- DOB inputs -->
+          <div id="day-dob" class="flex flex-col">
+            <label
+              for="day"
+              class="text-xs text-neutralSmokeyGrey font-bold tracking-[0.2em] uppercase"
+              >Day</label
+            >
+            <input
+              required
+              type="text"
+              name="day"
+              id="day-input"
+              placeholder="DD"
+              class="peer w-[5rem] h-12 border-[1.5px] border-neutralLightGrey text-neutralOffBlack px-4 font-bold placeholder:font-bold placeholder:text-neutral-400 focus:outline-none focus:caret-primaryPurple focus:border-primaryPurple focus:ring-1 focus:ring-primaryPurple focus:ring-opacity-70 rounded-md"
+            />
+            <p
+              id="day-error"
+              class="invisible peer-invalid:visible pt-1 text-primaryLightRed text-[0.4rem]"
+            >
+              This field is required
+            </p>
+          </div>
+
+          <div class="flex flex-col">
+            <label
+              for="month"
+              class="text-xs text-neutralSmokeyGrey font-bold tracking-[0.2em] uppercase"
+              >Month</label
+            >
+            <input
+              required
+              type="text"
+              name="month"
+              id="month-input"
+              placeholder="MM"
+              class="peer w-[5rem] h-12 border-[1.5px] border-neutralLightGrey text-neutralOffBlack px-4 font-bold placeholder:font-bold placeholder:text-neutral-400 focus:outline-none focus:caret-primaryPurple focus:border-primaryPurple focus:ring-1 focus:ring-primaryPurple focus:ring-opacity-70 rounded-md"
+            />
+            <p
+              id="month-error"
+              class="invisible peer-invalid:visible pt-1 text-primaryLightRed text-[0.4rem]"
+            >
+              This field is required
+            </p>
+          </div>
+
+          <div class="flex flex-col">
+            <label
+              for="year"
+              class="text-xs text-neutralSmokeyGrey font-bold tracking-[0.2em] uppercase"
+              >Year</label
+            >
+            <input
+              required
+              type="text"
+              name="year"
+              id="year-input"
+              placeholder="YYYY"
+              class="peer w-[5rem] h-12 border-[1.5px] border-neutralLightGrey text-neutralOffBlack px-4 font-bold placeholder:font-bold placeholder:text-neutral-400 focus:outline-none focus:caret-primaryPurple focus:border-primaryPurple focus:ring-1 focus:ring-primaryPurple focus:ring-opacity-70 rounded-md"
+            />
+            <p
+              id="year-error"
+              class="invisible peer-invalid:visible pt-1 text-primaryLightRed text-[0.4rem]"
+            >
+              This field is required
+            </p>
+          </div>
+        </div>
+        <!-- Form submit button -->
+        <div
+          class="relative flex flex-col items-center justify-center lg:items-end"
+        >
+          <hr class="absolute border-t-2 rounded-sm w-full z-0" />
+          <button
+            type="submit"
+            class="bg-primaryPurple active:bg-neutralOffBlack p-4 rounded-full 0 z-10"
+            id="submit"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="34"
+              height="32"
+              viewBox="0 0 46 44"
+            >
+              <g fill="none" stroke="#fff" stroke-width="3">
+                <path
+                  d="M1 22.019C8.333 21.686 23 25.616 23 44M23 44V0M45 22.019C37.667 21.686 23 25.616 23 44"
+                />
+              </g>
+            </svg>
+          </button>
+        </div>
+        <!-- Output section -->
+        <div id="output-section" class="flex flex-col">
+          <!-- Years -->
+          <div id="years-container" class="flex text-6xl font-bold italic">
+            <div id="years-output" class="text-primaryPurple">--</div>
+            <h3>years</h3>
+          </div>
+          <!-- Months -->
+          <div id="months-container" class="flex text-6xl font-bold italic">
+            <div id="months-output" class="text-primaryPurple">--</div>
+            <h3>months</h3>
+          </div>
+          <!-- Days -->
+          <div id="days-container" class="flex text-6xl font-bold italic">
+            <div id="days-output" class="text-primaryPurple">--</div>
+            <h3>days</h3>
+          </div>
+        </div>
+      </form>
+    </content>
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#" class="text-primaryPurple">Kane Latham</a>.
+    </div>
+    <script src="scripts/scripts.js"></script>
+  </body>
+</html>
